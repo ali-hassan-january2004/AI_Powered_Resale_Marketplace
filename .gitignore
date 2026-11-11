@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+
+# Environment variables and secrets (NEVER commit these)
+.env
+.env.*
+!.env.example
+
+# Build output
+dist/
+build/
+.vite/
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+
+# Uploads (if multer saves anything locally)
+uploads/
+tmp/
+
+# Python (ai-service, Phase 4)
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# AI datasets and trained models (large files; GitHub blocks files over 100 MB)
+ai-service/data/
+ai-service/datasets/
+*.pt
+*.pth
+*.onnx
+*.h5
+*.pkl
+*.safetensors
+wandb/
+mlruns/
