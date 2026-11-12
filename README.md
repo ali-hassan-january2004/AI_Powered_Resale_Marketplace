@@ -19,8 +19,8 @@ This is a consumer-to-consumer (C2C) marketplace for second-hand clothing and ac
 | Phase | Scope | Status |
 |-------|-------|--------|
 | 0 | Setup and planning | Done |
-| 1 | Frontend (React) with mock data | In progress |
-| 2 | Backend (Node.js / Express) | Planned |
+| 1 | Frontend (React), built against the planned API contract | Code complete, awaiting backend to test end to end |
+| 2 | Backend (Node.js / Express) | Next |
 | 3 | Database (MongoDB) and integration | Planned |
 | 4 | AI service (Python / FastAPI) | Planned |
 | 5 | Testing, deployment, documentation | Planned |
@@ -29,7 +29,7 @@ This is a consumer-to-consumer (C2C) marketplace for second-hand clothing and ac
 
 | Layer | Technology |
 |-------|------------|
-| Frontend | React 18, Vite, React Router, Redux Toolkit, Tailwind CSS, React Hook Form, Zod, Axios |
+| Frontend | React 18, Vite, React Router, Redux Toolkit, Tailwind CSS, React Hook Form, Zod, Axios, Recharts |
 | Backend | Node.js, Express, Mongoose, JWT, bcrypt *(Phase 2)* |
 | Database | MongoDB Atlas *(Phase 3)* |
 | AI service | Python, FastAPI, PyTorch, CLIP *(Phase 4)* |
@@ -38,19 +38,30 @@ This is a consumer-to-consumer (C2C) marketplace for second-hand clothing and ac
 ## Features
 
 **Buyers**
-- Browse, search, filter, and sort listings
-- Listing detail page with image gallery
-- Cart, wishlist, and checkout (simulated payment)
-- Order history and tracking
+- Browse, search, filter, and sort listings (filters are kept in the URL, so links can be shared)
+- Listing detail page with image gallery, similar items, and reporting
+- Cart, wishlist, and checkout (simulated payment: cash on delivery or test card)
+- Order history, tracking timeline, cancellation, and seller reviews
+- In-app notifications
 
 **Sellers**
-- Create and manage listings with multi-image upload
-- Seller dashboard and incoming orders
-- Earnings summary
+- Become a seller from the account page
+- Create and manage listings with multi-image upload, cover selection, and drafts
+- Seller dashboard with earnings, sales chart, and most-viewed items
+- Incoming orders with status updates (confirm, ship, deliver)
+- Shop settings and public seller profile
 
-**Admins** *(after backend)*
-- Moderate users, listings, and reports
-- Manage categories
+**Admins**
+- Dashboard with platform totals
+- Block or unblock users
+- Remove listings with a reason (the seller is notified)
+- Manage categories and handle user reports
+
+**AI (Phase 4)**
+- Photo to listing draft, price suggestion, condition grading
+- Semantic search and similar items
+- Fake and duplicate detection
+- The app always works without AI: suggestions are optional and editable
 
 ## Getting Started
 
@@ -60,34 +71,27 @@ This is a consumer-to-consumer (C2C) marketplace for second-hand clothing and ac
 - npm
 - Git
 
-### Installation
+### Run the frontend
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/<your-username>/<repo-name>.git
+git clone https://github.com/ali-hassan-january2004/<repo-name>.git
 cd <repo-name>
 
 # 2. Install frontend dependencies
 cd frontend
 npm install
 
-# 3. Set up environment variables
+# 3. Create your environment file (it is git-ignored)
 cp .env.example .env
 
 # 4. Start the development server
 npm run dev
 ```
 
-The app runs at **http://localhost:5173**.
+The app runs at **http://localhost:5173**. Pages that load data show an error banner until the backend (Phase 2) is running, because the frontend calls the real API contract from the SRS.
 
-### Available Scripts
-
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start the development server |
-| `npm run build` | Create a production build |
-| `npm run preview` | Preview the production build locally |
-| `npm run lint` | Run the linter |
+See [`frontend/README.md`](frontend/README.md) for scripts, structure, and conventions.
 
 ## Project Structure
 
@@ -95,32 +99,39 @@ The app runs at **http://localhost:5173**.
 .
 ├── frontend/          React app (Phase 1)
 │   └── src/
-│       ├── api/           API client and resource files
-│       ├── app/           Store and routes
-│       ├── components/    Reusable UI components
-│       ├── features/      Redux slices and hooks per feature
+│       ├── api/           Axios client and one file per API resource
+│       ├── app/           Store, routes, route paths
+│       ├── components/    ui/, layout/, listings/, selling/, commerce/,
+│       │                  seller/, admin/, reviews/, notifications/
+│       ├── features/      Redux slices, selectors, and schemas per feature
 │       ├── hooks/         Custom hooks
-│       ├── mocks/         Mock data (until the backend exists)
-│       ├── pages/         Route-level pages
-│       ├── styles/        Tailwind and design tokens
+│       ├── layouts/       Public, auth, seller, and admin layouts
+│       ├── pages/         public/, auth/, buyer/, seller/, admin/
 │       └── utils/         Helpers
 ├── backend/           Node/Express API (Phase 2)
 ├── ai-service/        FastAPI AI service (Phase 4)
+├── docs/              SRS and project documents
 └── README.md
 ```
 
 ## Environment Variables
 
-Copy `.env.example` to `.env` in each project folder. Never commit real `.env` files.
+Each project folder has its own `.env.example`. Copy it to `.env` in that same folder and fill in real values. Never commit real `.env` files.
+
+**frontend/.env**
 
 | Variable | Description | Default |
 |----------|-------------|---------|
 | `VITE_API_URL` | Backend API base URL | `http://localhost:5000/api` |
+| `VITE_CURRENCY` | ISO currency code used to format prices | `USD` |
+| `VITE_SHIPPING_FEE` | Flat shipping fee shown in the cart | `0` |
+
+Backend and AI service variables are listed in the SRS (Section 10.4) and will be added in their phases.
 
 ## Roadmap
 
 - [x] Project setup and planning
-- [ ] Phase 1: React frontend with mock data
+- [x] Phase 1: React frontend (code complete; end-to-end testing needs the backend)
 - [ ] Phase 2: REST API with auth, roles, and orders
 - [ ] Phase 3: MongoDB schema, seed data, frontend integration
 - [ ] Phase 4: AI models and FastAPI service
@@ -138,5 +149,5 @@ The full Software Requirements Specification (requirements, architecture, API, d
 
 ## Author
 
-**<Ali Hassan>**
+**Ali Hassan**
 [LinkedIn](https://www.linkedin.com/in/ali-hassan-january2004/) | [GitHub](https://github.com/ali-hassan-january2004)

@@ -1,13 +1,17 @@
 import { Navigate, Outlet, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { PATHS } from "../../app/routePaths";
+import { selectAuthInitialized, selectUser } from "../../features/auth/authSelectors";
+import Spinner from "../ui/Spinner";
 
 export default function ProtectedRoute() {
-  const user = useSelector((s) => s.auth.user);
+  const user = useSelector(selectUser);
+  const initialized = useSelector(selectAuthInitialized);
   const location = useLocation();
 
-  if (!user) {
-    return <Navigate to={PATHS.login} replace state={{ from: location }} />;
+  if (!initialized) {
+    return <div className="flex justify-center p-16 text-stone-500"><Spinner size={28} /></div>;
   }
+  if (!user) return <Navigate to={PATHS.login} replace state={{ from: location }} />;
   return <Outlet />;
 }

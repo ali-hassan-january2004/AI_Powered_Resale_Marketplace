@@ -1,32 +1,32 @@
-    import { useState } from "react";
+import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Heart } from "lucide-react";
 import { PATHS } from "../../app/routePaths";
-import { addToWishlist, removeFromWishlist } from "../../api/wishlist";
+import { selectUser } from "../../features/auth/authSelectors";
+import { selectWishlistFlag, toggleWishlist } from "../../features/wishlist/wishlistSlice";
 
 export default function WishlistButton({ listingId, initialActive = false, onChange, className = "" }) {
-  const user = useSelector((s) => s.auth.user);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
-  const [active, setActive] = useState(initialActive);
+  const user = useSelector(selectUser);
+  const stored = useSelector(selectWishlistFlag(listingId));
   const [busy, setBusy] = useState(false);
+  const active = stored ?? initialActive;
 
   const toggle = async (e) => {
     e.preventDefault(); // the button sits inside a card link
     e.stopPropagation();
     if (!user) return navigate(PATHS.login, { state: { from: location } });
     if (busy) return;
-
     const next = !active;
-    setActive(next); // optimistic update
     setBusy(true);
     try {
-      if (next) await addToWishlist(listingId);
-      else await removeFromWishlist(listingId);
+      await dispatch(toggleWishlist({ listingId, add: next })).unwrap();
       onChange?.(next);
     } catch {
-      setActive(!next); // roll back
+      /* the slice already rolled the heart back */
     } finally {
       setBusy(false);
     }

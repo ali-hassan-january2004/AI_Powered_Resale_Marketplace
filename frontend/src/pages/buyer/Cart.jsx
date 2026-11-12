@@ -33,7 +33,7 @@ export default function Cart() {
     }
   };
 
-  const loading = status === "loading" && !items.length;
+  const loading = (status === "idle" || status === "loading") && !items.length;
   const unavailable = items.some((i) => i.status && i.status !== "active");
   const totals = calcTotals(items.filter((i) => !i.status || i.status === "active"));
 

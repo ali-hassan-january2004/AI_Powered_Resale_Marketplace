@@ -1,10 +1,14 @@
 import { Link, Navigate, Outlet, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { PATHS } from "../app/routePaths";
+import { selectAuthInitialized } from "../features/auth/authSelectors";
 
 export default function AuthLayout() {
   const user = useSelector((s) => s.auth.user);
   const location = useLocation();
+
+  const initialized = useSelector(selectAuthInitialized);
+if (!initialized) return null;
 
   // Already logged in: skip the login/register screens.
   if (user) return <Navigate to={location.state?.from?.pathname || PATHS.home} replace />;

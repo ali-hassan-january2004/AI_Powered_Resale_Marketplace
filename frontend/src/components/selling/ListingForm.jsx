@@ -37,7 +37,7 @@ function Field({ label, error, children, htmlFor }) {
 
 // onSubmit(values, images, { draft: boolean }) must return a promise.
 // images: [{ id, url, file?, isCover }]
-export default function ListingForm({ initialValues, initialImages = [], categories = [], onSubmit, submitLabel = "Publish listing" }) {
+export default function ListingForm({ initialValues, initialImages = [], categories = [], onSubmit, submitLabel = "Publish listing", showDraftButton = true }) {
   const [images, setImages] = useState(initialImages);
   const [imageError, setImageError] = useState("");
   const [saving, setSaving] = useState(null); // "publish" | "draft" | null

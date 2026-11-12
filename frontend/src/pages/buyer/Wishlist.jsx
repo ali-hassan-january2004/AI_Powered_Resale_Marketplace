@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { Heart } from "lucide-react";
 import { PATHS } from "../../app/routePaths";
-import { getWishlist, removeFromWishlist } from "../../api/wishlist";
+import { getWishlist } from "../../api/wishlist";
+import { toggleWishlist } from "../../features/wishlist/wishlistSlice";
 import { addCartItem } from "../../features/cart/cartSlice";
 import { errMsg } from "../../utils/errors";
 import useFetch from "../../hooks/useFetch";
@@ -27,7 +28,7 @@ export default function Wishlist() {
     setMovingId(listing._id);
     try {
       await dispatch(addCartItem(listing._id)).unwrap();
-      await removeFromWishlist(listing._id);
+      await dispatch(toggleWishlist({ listingId: listing._id, add: false })).unwrap();
       dropFromList(listing._id);
       toast.success("Moved to your cart");
     } catch (e) {

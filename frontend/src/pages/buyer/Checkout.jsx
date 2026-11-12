@@ -26,10 +26,10 @@ export default function Checkout() {
 
   useEffect(() => { dispatch(fetchCart()); }, [dispatch]);
 
-  if (status === "loading" && !items.length) {
+  if ((status === "idle" || status === "loading") && !items.length) {
     return <PageContainer><div className="flex justify-center py-16"><Spinner size={28} /></div></PageContainer>;
   }
-  if (status !== "loading" && !items.length && !placing) return <Navigate to={PATHS.cart} replace />;
+  if (status === "succeeded" && !items.length && !placing) return <Navigate to={PATHS.cart} replace />;
 
   const unavailable = items.some((i) => i.status && i.status !== "active");
   const totals = calcTotals(items);
