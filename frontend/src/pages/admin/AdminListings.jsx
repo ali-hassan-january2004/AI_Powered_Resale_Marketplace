@@ -8,7 +8,7 @@ import RemoveListingModal from "../../components/admin/RemoveListingModal";
 import Select from "../../components/ui/Select";
 import Pagination from "../../components/ui/Pagination";
 import ErrorBanner from "../../components/ui/ErrorBanner";
-import { toast } from "../../components/ui/Toast";
+import { toast } from "../../components/ui/toastStore";
 
 const LIMIT = 20;
 const STATUSES = ["active", "reserved", "sold", "flagged", "removed", "draft"].map((s) => ({ value: s, label: s[0].toUpperCase() + s.slice(1) }));

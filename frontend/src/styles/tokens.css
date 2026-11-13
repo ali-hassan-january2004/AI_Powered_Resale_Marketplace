@@ -1,0 +1,36 @@
+:root {
+  /* Brand (emerald) */
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+
+  /* Neutrals (stone) */
+  --color-ink: #1c1917;
+  --color-muted: #78716c;
+  --color-border: #e7e5e4;
+  --color-canvas: #fafaf9;
+  --color-surface: #ffffff;
+
+  /* Feedback */
+  --color-success: #059669;
+  --color-warning: #d97706;
+  --color-danger: #dc2626;
+  --color-info: #2563eb;
+
+  /* Type */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Shape and elevation */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --shadow-card: 0 1px 2px rgb(28 25 23 / 0.06);
+  --shadow-pop: 0 10px 30px rgb(28 25 23 / 0.12);
+
+  /* Layout */
+  --header-height: 4rem;
+  --page-max-width: 80rem;
+}

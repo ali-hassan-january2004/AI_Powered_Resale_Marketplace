@@ -26,7 +26,10 @@ export default function CategoryManager() {
     }
   }, []);
 
-  useEffect(() => { load(); }, [load]);
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- Load manages its async pending state.
+    load();
+  }, [load]);
 
   const flat = useMemo(() => flatten(tree), [tree]);
 

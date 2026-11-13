@@ -1,0 +1,123 @@
+[
+  {
+    "_id": "l1", "seller": "u2", "category": "c6", "title": "Black leather biker jacket",
+    "description": "Genuine leather biker jacket with silver hardware and a quilted lining. Worn a handful of times, no cracks or peeling. Fits true to size.",
+    "brand": "AllSaints", "size": "M", "color": "black", "condition": "good", "price": 85,
+    "images": [
+      { "url": "/images/editorial-hero.jpg", "publicId": "l1a", "isCover": true, "order": 0 },
+      { "url": "/images/category-accessories.jpg", "publicId": "l1b", "isCover": false, "order": 1 }
+    ],
+    "status": "active", "views": 214, "favoritesCount": 18, "createdAt": "2026-11-08T10:00:00.000Z"
+  },
+  {
+    "_id": "l2", "seller": "u2", "category": "c4", "title": "Floral midi summer dress",
+    "description": "Lightweight floral midi dress with a tie waist and short sleeves. Worn once to a wedding and dry cleaned afterwards.",
+    "brand": "Mango", "size": "S", "color": "pink", "condition": "like_new", "price": 32,
+    "images": [
+      { "url": "/images/category-women.jpg", "publicId": "l2a", "isCover": true, "order": 0 },
+      { "url": "/images/editorial-hero.jpg", "publicId": "l2b", "isCover": false, "order": 1 }
+    ],
+    "status": "active", "views": 96, "favoritesCount": 9, "createdAt": "2026-11-07T09:30:00.000Z"
+  },
+  {
+    "_id": "l3", "seller": "u2", "category": "c5", "title": "Cream cable-knit sweater",
+    "description": "Soft chunky cable-knit sweater in cream. No pilling, no stains. Perfect for autumn layering.",
+    "brand": "H&M", "size": "L", "color": "beige", "condition": "good", "price": 18,
+    "images": [
+      { "url": "/images/resale-clothing.jpg", "publicId": "l3a", "isCover": true, "order": 0 }
+    ],
+    "status": "active", "views": 61, "favoritesCount": 4, "createdAt": "2026-11-05T14:00:00.000Z"
+  },
+  {
+    "_id": "l4", "seller": "u3", "category": "c8", "title": "Vintage denim trucker jacket",
+    "description": "Classic 90s trucker jacket with natural fading and brass buttons. Small mark on the left cuff, shown in the second photo.",
+    "brand": "Levi's", "size": "L", "color": "blue", "condition": "fair", "price": 45,
+    "images": [
+      { "url": "/images/category-accessories.jpg", "publicId": "l4a", "isCover": true, "order": 0 },
+      { "url": "/images/resale-clothing.jpg", "publicId": "l4b", "isCover": false, "order": 1 }
+    ],
+    "status": "active", "views": 140, "favoritesCount": 12, "createdAt": "2026-11-04T16:20:00.000Z"
+  },
+  {
+    "_id": "l5", "seller": "u3", "category": "c9", "title": "Slim fit dark wash jeans",
+    "description": "Dark wash slim fit jeans with stretch. Hemmed for a shorter leg, otherwise in excellent condition.",
+    "brand": "Levi's", "size": "M", "color": "blue", "condition": "like_new", "price": 38,
+    "images": [
+      { "url": "/images/resale-clothing.jpg", "publicId": "l5a", "isCover": true, "order": 0 }
+    ],
+    "status": "active", "views": 77, "favoritesCount": 6, "createdAt": "2026-11-03T08:45:00.000Z"
+  },
+  {
+    "_id": "l6", "seller": "u3", "category": "c7", "title": "White Oxford button-down shirt",
+    "description": "Crisp white Oxford shirt, brand new with tags attached. Bought in the wrong size and never worn.",
+    "brand": "Ralph Lauren", "size": "L", "color": "white", "condition": "new_with_tags", "price": 40,
+    "images": [
+      { "url": "/images/category-accessories.jpg", "publicId": "l6a", "isCover": true, "order": 0 }
+    ],
+    "status": "active", "views": 52, "favoritesCount": 3, "createdAt": "2026-11-02T12:10:00.000Z"
+  },
+  {
+    "_id": "l7", "seller": "u2", "category": "c10", "title": "Brown leather crossbody bag",
+    "description": "Compact crossbody bag in smooth brown leather with an adjustable strap. Light wear on the corners, interior is clean.",
+    "brand": "Coach", "size": "One size", "color": "brown", "condition": "good", "price": 95,
+    "images": [
+      { "url": "/images/category-women.jpg", "publicId": "l7a", "isCover": true, "order": 0 },
+      { "url": "/images/category-accessories.jpg", "publicId": "l7b", "isCover": false, "order": 1 }
+    ],
+    "status": "active", "views": 188, "favoritesCount": 21, "createdAt": "2026-11-01T17:00:00.000Z"
+  },
+  {
+    "_id": "l8", "seller": "u3", "category": "c11", "title": "Minimalist steel watch",
+    "description": "Slim steel watch with a grey dial and mesh strap. New battery fitted last month and keeping perfect time.",
+    "brand": "Casio", "size": "One size", "color": "grey", "condition": "like_new", "price": 55,
+    "images": [
+      { "url": "/images/resale-watch-neutral.jpg", "publicId": "l8a", "isCover": true, "order": 0 }
+    ],
+    "status": "active", "views": 83, "favoritesCount": 7, "createdAt": "2026-10-30T11:30:00.000Z"
+  },
+  {
+    "_id": "l9", "seller": "u2", "category": "c4", "title": "Classic little black dress",
+    "description": "Knee-length little black dress with a structured bodice and hidden zip. Worn twice, dry cleaned.",
+    "brand": "Zara", "size": "S", "color": "black", "condition": "like_new", "price": 28,
+    "images": [
+      { "url": "/images/category-women.jpg", "publicId": "l9a", "isCover": true, "order": 0 }
+    ],
+    "status": "reserved", "views": 70, "favoritesCount": 8, "createdAt": "2026-10-29T15:00:00.000Z"
+  },
+  {
+    "_id": "l10", "seller": "u2", "category": "c5", "title": "Striped linen shirt",
+    "description": "Breezy striped linen shirt, relaxed fit. Still need to add measurements and more photos.",
+    "brand": "Uniqlo", "size": "M", "color": "blue", "condition": "good", "price": 20,
+    "images": [
+      { "url": "/images/category-accessories.jpg", "publicId": "l10a", "isCover": true, "order": 0 }
+    ],
+    "status": "draft", "views": 0, "favoritesCount": 0, "createdAt": "2026-11-10T08:00:00.000Z"
+  },
+  {
+    "_id": "l11", "seller": "u2", "category": "c6", "title": "Camel wool coat",
+    "description": "Elegant camel wool-blend coat with a belted waist and two front pockets. Dry cleaned and ready to wear.",
+    "brand": "Massimo Dutti", "size": "M", "color": "beige", "condition": "good", "price": 70,
+    "images": [
+      { "url": "/images/editorial-hero.jpg", "publicId": "l11a", "isCover": true, "order": 0 }
+    ],
+    "status": "sold", "views": 305, "favoritesCount": 25, "createdAt": "2026-10-12T10:00:00.000Z"
+  },
+  {
+    "_id": "l12", "seller": "u3", "category": "c8", "title": "Olive green bomber jacket",
+    "description": "Classic olive bomber jacket with the signature orange lining. Zips and cuffs are in perfect shape.",
+    "brand": "Alpha Industries", "size": "L", "color": "green", "condition": "like_new", "price": 60,
+    "images": [
+      { "url": "/images/editorial-hero.jpg", "publicId": "l12a", "isCover": true, "order": 0 }
+    ],
+    "status": "reserved", "views": 120, "favoritesCount": 14, "createdAt": "2026-10-25T13:15:00.000Z"
+  },
+  {
+    "_id": "l13", "seller": "u3", "category": "c7", "title": "Designer logo shirt",
+    "description": "Designer logo shirt. Price is firm. Message me for more details about authenticity.",
+    "brand": "Gucci", "size": "M", "color": "black", "condition": "new_with_tags", "price": 5,
+    "images": [
+      { "url": "/images/resale-clothing.jpg", "publicId": "l13a", "isCover": true, "order": 0 }
+    ],
+    "status": "flagged", "views": 40, "favoritesCount": 1, "createdAt": "2026-11-09T18:00:00.000Z"
+  }
+]

@@ -8,6 +8,15 @@ export default {
         display: ['"Fraunces"', "Georgia", "serif"],
         sans: ['"DM Sans"', "system-ui", "-apple-system", "Segoe UI", "sans-serif"],
       },
+      colors: {
+        brand: {
+          50: "var(--color-brand-50)",
+          100: "var(--color-brand-100)",
+          500: "var(--color-brand-500)",
+          600: "var(--color-brand-600)",
+          700: "var(--color-brand-700)",
+        },
+      },
     },
   },
   plugins: [],

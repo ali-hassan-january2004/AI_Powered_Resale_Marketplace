@@ -30,6 +30,7 @@ export default function NotificationBell() {
 
   useEffect(() => {
     if (!user) return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- Initial and periodic refreshes update remote notification state.
     load();
     const id = setInterval(load, POLL_MS);
     return () => clearInterval(id);

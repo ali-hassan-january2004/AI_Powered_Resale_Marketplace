@@ -22,7 +22,7 @@ import Button from "../../components/ui/Button";
 import Modal from "../../components/ui/Modal";
 import Select from "../../components/ui/Select";
 import Textarea from "../../components/ui/Textarea";
-import { toast } from "../../components/ui/Toast";
+import { toast } from "../../components/ui/toastStore";
 
 const REASONS = [
   "Counterfeit or fake item",

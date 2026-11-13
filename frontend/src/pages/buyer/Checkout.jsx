@@ -12,7 +12,7 @@ import PaymentOptions from "../../components/commerce/PaymentOptions";
 import OrderSummary from "../../components/commerce/OrderSummary";
 import Button from "../../components/ui/Button";
 import Spinner from "../../components/ui/Spinner";
-import { toast } from "../../components/ui/Toast";
+import { toast } from "../../components/ui/toastStore";
 
 export default function Checkout() {
   const dispatch = useDispatch();

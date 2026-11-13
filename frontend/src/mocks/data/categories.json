@@ -1,0 +1,13 @@
+[
+  { "_id": "c1", "name": "Women", "slug": "women", "parent": null, "icon": "", "isActive": true },
+  { "_id": "c2", "name": "Men", "slug": "men", "parent": null, "icon": "", "isActive": true },
+  { "_id": "c3", "name": "Accessories", "slug": "accessories", "parent": null, "icon": "", "isActive": true },
+  { "_id": "c4", "name": "Dresses", "slug": "women-dresses", "parent": "c1", "icon": "", "isActive": true },
+  { "_id": "c5", "name": "Tops", "slug": "women-tops", "parent": "c1", "icon": "", "isActive": true },
+  { "_id": "c6", "name": "Jackets & coats", "slug": "women-jackets", "parent": "c1", "icon": "", "isActive": true },
+  { "_id": "c7", "name": "Shirts", "slug": "men-shirts", "parent": "c2", "icon": "", "isActive": true },
+  { "_id": "c8", "name": "Jackets", "slug": "men-jackets", "parent": "c2", "icon": "", "isActive": true },
+  { "_id": "c9", "name": "Jeans", "slug": "men-jeans", "parent": "c2", "icon": "", "isActive": true },
+  { "_id": "c10", "name": "Bags", "slug": "bags", "parent": "c3", "icon": "", "isActive": true },
+  { "_id": "c11", "name": "Watches", "slug": "watches", "parent": "c3", "icon": "", "isActive": true }
+]

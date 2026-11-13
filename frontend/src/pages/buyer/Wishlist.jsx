@@ -14,7 +14,7 @@ import Button from "../../components/ui/Button";
 import EmptyState from "../../components/ui/EmptyState";
 import ErrorBanner from "../../components/ui/ErrorBanner";
 import Skeleton from "../../components/ui/Skeleton";
-import { toast } from "../../components/ui/Toast";
+import { toast } from "../../components/ui/toastStore";
 
 export default function Wishlist() {
   const dispatch = useDispatch();

@@ -1,0 +1,22 @@
+[
+  {
+    "_id": "n1", "user": "u4", "type": "order_status", "message": "Your order #O2 has been shipped.",
+    "link": "/orders/o2", "isRead": false, "createdAt": "2026-11-09T14:00:00.000Z"
+  },
+  {
+    "_id": "n2", "user": "u4", "type": "order_status", "message": "Your order #O1 is completed. Leave a review for the seller!",
+    "link": "/orders/o1", "isRead": true, "createdAt": "2026-10-24T08:00:00.000Z"
+  },
+  {
+    "_id": "n3", "user": "u2", "type": "order_placed", "message": "New order #O3 from Bilal Ahmed.",
+    "link": "/seller/orders/o3", "isRead": false, "createdAt": "2026-11-11T12:00:00.000Z"
+  },
+  {
+    "_id": "n4", "user": "u3", "type": "system", "message": "Welcome to Resale! Complete your shop settings to build trust with buyers.",
+    "link": "/seller/settings", "isRead": false, "createdAt": "2026-09-15T11:05:00.000Z"
+  },
+  {
+    "_id": "n5", "user": "u4", "type": "system", "message": "Welcome to Resale! Save items you love with the heart icon.",
+    "link": "/wishlist", "isRead": true, "createdAt": "2026-09-20T12:05:00.000Z"
+  }
+]

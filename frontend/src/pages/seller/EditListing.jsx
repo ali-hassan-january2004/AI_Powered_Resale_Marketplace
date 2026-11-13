@@ -7,7 +7,7 @@ import PageContainer from "../../components/layout/PageContainer";
 import ListingForm from "../../components/selling/ListingForm";
 import ErrorBanner from "../../components/ui/ErrorBanner";
 import Skeleton from "../../components/ui/Skeleton";
-import { toast } from "../../components/ui/Toast";
+import { toast } from "../../components/ui/toastStore";
 
 export default function EditListing() {
   const { id } = useParams();

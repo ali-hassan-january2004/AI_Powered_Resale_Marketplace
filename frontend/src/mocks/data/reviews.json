@@ -1,0 +1,17 @@
+[
+  {
+    "_id": "r1", "order": "o1", "reviewer": "u4", "seller": "u2", "rating": 5,
+    "comment": "Beautiful coat, exactly as described. Fast shipping!",
+    "createdAt": "2026-10-28T09:00:00.000Z"
+  },
+  {
+    "_id": "r2", "order": "o-old-1", "reviewer": "u5", "seller": "u2", "rating": 4,
+    "comment": "Dress was as described, shipping took a bit long.",
+    "createdAt": "2026-10-05T09:00:00.000Z"
+  },
+  {
+    "_id": "r3", "order": "o-old-2", "reviewer": "u4", "seller": "u3", "rating": 5,
+    "comment": "Great seller, careful packaging.",
+    "createdAt": "2026-10-08T09:00:00.000Z"
+  }
+]

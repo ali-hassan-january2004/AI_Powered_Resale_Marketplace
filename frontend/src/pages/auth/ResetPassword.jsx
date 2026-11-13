@@ -8,7 +8,7 @@ import { resetPassword } from "../../api/auth";
 import { errMsg } from "../../utils/errors";
 import Input from "../../components/ui/Input";
 import Button from "../../components/ui/Button";
-import { toast } from "../../components/ui/Toast";
+import { toast } from "../../components/ui/toastStore";
 
 const schema = z
   .object({ password: z.string().min(8, "Use at least 8 characters").max(72), confirm: z.string() })

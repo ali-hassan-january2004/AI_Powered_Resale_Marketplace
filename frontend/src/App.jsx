@@ -18,12 +18,13 @@ export default function App() {
   }, [dispatch]);
 
   // Navbar cart badge and wishlist hearts need data once someone is logged in
+  const userId = user?._id;
   useEffect(() => {
-    if (user) {
+    if (userId) {
       dispatch(fetchCart());
       dispatch(fetchWishlist());
     }
-  }, [dispatch, user?._id]);
+  }, [dispatch, userId]);
 
   return (
     <>

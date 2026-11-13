@@ -9,7 +9,6 @@ import { fetchListingById, fetchListings } from "./listingsSlice";
 export default function useListings(params = {}) {
   const dispatch = useDispatch();
   const paramsRef = useRef(params);
-  paramsRef.current = params;
   const key = listKey(params);
 
   const data = useSelector((s) => s.listings.cache[key] ?? null);
@@ -17,6 +16,10 @@ export default function useListings(params = {}) {
   const error = useSelector((s) => (s.listings.activeKey === key && s.listings.status === "failed" ? s.listings.error : ""));
 
   const refetch = useCallback(() => dispatch(fetchListings(paramsRef.current)), [dispatch]);
+
+  useEffect(() => {
+    paramsRef.current = params;
+  }, [params]);
 
   useEffect(() => {
     dispatch(fetchListings(paramsRef.current));

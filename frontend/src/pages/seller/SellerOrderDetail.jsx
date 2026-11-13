@@ -10,7 +10,7 @@ import StatusBadge from "../../components/commerce/StatusBadge";
 import OrderStatusUpdater from "../../components/seller/OrderStatusUpdater";
 import ErrorBanner from "../../components/ui/ErrorBanner";
 import Skeleton from "../../components/ui/Skeleton";
-import { toast } from "../../components/ui/Toast";
+import { toast } from "../../components/ui/toastStore";
 
 export default function SellerOrderDetail() {
   const { id } = useParams();

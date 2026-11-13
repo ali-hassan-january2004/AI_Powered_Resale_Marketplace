@@ -169,9 +169,11 @@ export default function ListingForm({ initialValues, initialImages = [], categor
 
       <div className="flex flex-wrap gap-3">
         <Button type="submit" loading={saving === "publish"} disabled={!!saving}>{submitLabel}</Button>
-        <Button type="button" variant="secondary" loading={saving === "draft"} disabled={!!saving} onClick={saveDraft}>
-          Save as draft
-        </Button>
+        {showDraftButton && (
+          <Button type="button" variant="secondary" loading={saving === "draft"} disabled={!!saving} onClick={saveDraft}>
+            Save as draft
+          </Button>
+        )}
       </div>
     </form>
   );

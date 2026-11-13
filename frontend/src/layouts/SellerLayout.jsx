@@ -1,9 +1,8 @@
 import { Outlet } from "react-router-dom";
-import { LayoutDashboard, PlusCircle, ShoppingBag } from "lucide-react";
+import { LayoutDashboard, Package, PlusCircle, Settings, ShoppingBag } from "lucide-react";
 import { PATHS } from "../app/routePaths";
 import Navbar from "../components/layout/Navbar";
 import Sidebar from "../components/layout/Sidebar";
-import { LayoutDashboard, Package, PlusCircle, Settings, ShoppingBag } from "lucide-react";
 
 const ITEMS = [
   { to: PATHS.sellerDashboard, label: "Dashboard", icon: LayoutDashboard, end: true },

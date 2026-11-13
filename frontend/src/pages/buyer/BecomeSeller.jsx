@@ -12,7 +12,7 @@ import PageContainer from "../../components/layout/PageContainer";
 import Input from "../../components/ui/Input";
 import Textarea from "../../components/ui/Textarea";
 import Button from "../../components/ui/Button";
-import { toast } from "../../components/ui/Toast";
+import { toast } from "../../components/ui/toastStore";
 
 const schema = z.object({
   shopName: z.string().trim().min(3, "Shop name must be at least 3 characters").max(40),

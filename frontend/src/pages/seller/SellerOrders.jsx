@@ -11,7 +11,7 @@ import Pagination from "../../components/ui/Pagination";
 import EmptyState from "../../components/ui/EmptyState";
 import ErrorBanner from "../../components/ui/ErrorBanner";
 import Skeleton from "../../components/ui/Skeleton";
-import { toast } from "../../components/ui/Toast";
+import { toast } from "../../components/ui/toastStore";
 
 const TABS = ["all", "pending", "confirmed", "shipped", "delivered", "completed", "cancelled"].map((id) => ({
   id, label: id[0].toUpperCase() + id.slice(1),

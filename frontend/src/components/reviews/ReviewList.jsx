@@ -30,7 +30,10 @@ export default function ReviewList({ sellerId }) {
     [sellerId]
   );
 
-  useEffect(() => { load(1); }, [load]);
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- Load manages its async pending state.
+    load(1);
+  }, [load]);
 
   if (error) return <p className="py-6 text-sm text-red-600">{error}</p>;
   if (!loading && !items.length) return <p className="py-6 text-sm text-stone-500">No reviews yet.</p>;

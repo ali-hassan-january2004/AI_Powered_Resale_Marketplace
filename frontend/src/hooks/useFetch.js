@@ -22,7 +22,10 @@ export default function useFetch(fn, deps = [], { enabled = true } = {}) {
 
   useEffect(() => {
     if (enabled) run();
-    return () => { reqId.current++; }; // ignore stale responses
+    return () => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps -- The ref is a request sequence counter, not a rendered DOM ref.
+      reqId.current++;
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [enabled, ...deps]);
 

@@ -8,6 +8,7 @@ export default function SimilarItems({ listingId, title = "More like this" }) {
 
   useEffect(() => {
     let cancelled = false;
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- Show loading while fetching items for a changed listing.
     setLoading(true);
     getSimilarListings(listingId)
       .then((res) => !cancelled && setItems(Array.isArray(res) ? res : res.items || []))

@@ -7,6 +7,7 @@ export default function FilterDrawer({ open, onClose, filters, onApply, categori
   const [draft, setDraft] = useState(filters);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- Keep the editable draft in sync when applied filters change.
     if (open) setDraft(filters);
   }, [open, filters]);
 

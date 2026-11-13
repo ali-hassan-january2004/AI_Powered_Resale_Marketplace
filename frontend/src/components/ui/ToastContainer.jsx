@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import Toast, { subscribeToasts, toast } from "./Toast";
+import Toast from "./Toast";
+import { subscribeToasts, toast } from "./toastStore";
 
 export default function ToastContainer() {
   const [items, setItems] = useState([]);

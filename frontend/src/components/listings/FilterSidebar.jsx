@@ -20,6 +20,7 @@ export default function FilterSidebar({ filters = {}, onChange, categories = [] 
   const [brand, setBrand] = useState(filters.brand ?? "");
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- Reset input drafts when the applied filter values change.
     setPrice({ min: filters.minPrice ?? "", max: filters.maxPrice ?? "" });
     setBrand(filters.brand ?? "");
   }, [filters.minPrice, filters.maxPrice, filters.brand]);

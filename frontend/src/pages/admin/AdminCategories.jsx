@@ -7,7 +7,7 @@ import ReportsTable from "../../components/admin/ReportsTable";
 import ReportActionModal from "../../components/admin/ReportActionModal";
 import Tabs from "../../components/ui/Tabs";
 import ErrorBanner from "../../components/ui/ErrorBanner";
-import { toast } from "../../components/ui/Toast";
+import { toast } from "../../components/ui/toastStore";
 
 function ReportsPanel() {
   const [reviewing, setReviewing] = useState(null);

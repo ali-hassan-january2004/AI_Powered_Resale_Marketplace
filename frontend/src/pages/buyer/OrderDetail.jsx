@@ -16,7 +16,7 @@ import ConfirmDialog from "../../components/ui/ConfirmDialog";
 import ErrorBanner from "../../components/ui/ErrorBanner";
 import Skeleton from "../../components/ui/Skeleton";
 import Button from "../../components/ui/Button";
-import { toast } from "../../components/ui/Toast";
+import { toast } from "../../components/ui/toastStore";
 
 export default function OrderDetail() {
   const { id } = useParams();

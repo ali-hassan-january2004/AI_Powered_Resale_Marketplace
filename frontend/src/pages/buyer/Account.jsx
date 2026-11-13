@@ -16,7 +16,7 @@ import Button from "../../components/ui/Button";
 import Modal from "../../components/ui/Modal";
 import ConfirmDialog from "../../components/ui/ConfirmDialog";
 import Tabs from "../../components/ui/Tabs";
-import { toast } from "../../components/ui/Toast";
+import { toast } from "../../components/ui/toastStore";
 
 const profileSchema = z.object({
   name: z.string().trim().min(2, "Enter your name").max(60),

@@ -1,0 +1,12 @@
+[
+  {
+    "_id": "rp1", "reporter": "u4", "targetType": "listing", "targetId": "l13",
+    "reason": "Counterfeit or fake item: the price is far too low for this brand.",
+    "status": "open", "createdAt": "2026-11-10T09:00:00.000Z"
+  },
+  {
+    "_id": "rp2", "reporter": "u5", "targetType": "listing", "targetId": "l4",
+    "reason": "Spam or duplicate listing",
+    "status": "dismissed", "createdAt": "2026-11-06T09:00:00.000Z"
+  }
+]

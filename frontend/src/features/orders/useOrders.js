@@ -8,7 +8,6 @@ import { fetchOrder, fetchOrders } from "./ordersSlice";
 export function useOrders(params = {}) {
   const dispatch = useDispatch();
   const paramsRef = useRef(params);
-  paramsRef.current = params;
   const key = listKey(params);
 
   const list = useSelector((s) => s.orders.list);
@@ -16,6 +15,9 @@ export function useOrders(params = {}) {
   const error = useSelector((s) => s.orders.listError);
 
   const refetch = useCallback(() => dispatch(fetchOrders(paramsRef.current)), [dispatch]);
+  useEffect(() => {
+    paramsRef.current = params;
+  }, [params]);
   useEffect(() => { refetch(); }, [refetch, key]);
 
   return {

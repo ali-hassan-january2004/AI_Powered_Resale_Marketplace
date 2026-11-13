@@ -1,18 +1,14 @@
-import { useEffect, useState } from "react";
+import { useCallback, useSyncExternalStore } from "react";
 
 export default function useMediaQuery(query) {
-  const get = () => typeof window !== "undefined" && window.matchMedia(query).matches;
-  const [matches, setMatches] = useState(get);
-
-  useEffect(() => {
+  const subscribe = useCallback((onChange) => {
     const mql = window.matchMedia(query);
-    const onChange = (e) => setMatches(e.matches);
-    setMatches(mql.matches);
     mql.addEventListener("change", onChange);
     return () => mql.removeEventListener("change", onChange);
   }, [query]);
 
-  return matches;
+  const getSnapshot = useCallback(() => window.matchMedia(query).matches, [query]);
+  return useSyncExternalStore(subscribe, getSnapshot, () => false);
 }
 
 // Breakpoints match Tailwind (SRS 6.1)

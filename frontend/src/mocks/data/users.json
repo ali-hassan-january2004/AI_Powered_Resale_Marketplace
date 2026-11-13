@@ -1,0 +1,43 @@
+[
+  {
+    "_id": "u1", "name": "Admin User", "email": "admin@resale.test", "password": "password123", "role": "admin",
+    "avatarUrl": "", "phone": "", "addresses": [], "ratingAvg": 0, "ratingCount": 0, "isBlocked": false,
+    "createdAt": "2026-09-01T09:00:00.000Z"
+  },
+  {
+    "_id": "u2", "name": "Sara Khan", "email": "sara@resale.test", "password": "password123", "role": "seller",
+    "avatarUrl": "", "phone": "555-0102", "addresses": [], "ratingAvg": 4.5, "ratingCount": 2, "isBlocked": false,
+    "sellerProfile": {
+      "shopName": "Sara's Closet",
+      "bio": "Curated women's pieces, all in great condition.",
+      "returnPolicy": "Returns accepted within 7 days if the item is not as described."
+    },
+    "createdAt": "2026-09-10T10:00:00.000Z"
+  },
+  {
+    "_id": "u3", "name": "Omar Ali", "email": "omar@resale.test", "password": "password123", "role": "seller",
+    "avatarUrl": "", "phone": "555-0103", "addresses": [], "ratingAvg": 5, "ratingCount": 1, "isBlocked": false,
+    "sellerProfile": {
+      "shopName": "Vintage Vault",
+      "bio": "Menswear and vintage finds.",
+      "returnPolicy": ""
+    },
+    "createdAt": "2026-09-15T11:00:00.000Z"
+  },
+  {
+    "_id": "u4", "name": "Ayesha Noor", "email": "ayesha@resale.test", "password": "password123", "role": "buyer",
+    "avatarUrl": "", "phone": "555-0104",
+    "addresses": [
+      {
+        "_id": "a1", "label": "Home", "line1": "221 Park Avenue", "city": "Springfield", "region": "IL",
+        "postalCode": "62701", "country": "USA", "isDefault": true
+      }
+    ],
+    "ratingAvg": 0, "ratingCount": 0, "isBlocked": false, "createdAt": "2026-09-20T12:00:00.000Z"
+  },
+  {
+    "_id": "u5", "name": "Bilal Ahmed", "email": "bilal@resale.test", "password": "password123", "role": "buyer",
+    "avatarUrl": "", "phone": "555-0105", "addresses": [],
+    "ratingAvg": 0, "ratingCount": 0, "isBlocked": false, "createdAt": "2026-10-02T13:00:00.000Z"
+  }
+]

@@ -6,7 +6,7 @@ import SearchBar from "../../components/listings/SearchBar";
 import UsersTable from "../../components/admin/UsersTable";
 import Pagination from "../../components/ui/Pagination";
 import ErrorBanner from "../../components/ui/ErrorBanner";
-import { toast } from "../../components/ui/Toast";
+import { toast } from "../../components/ui/toastStore";
 
 const LIMIT = 20;
 

@@ -12,7 +12,7 @@ import OrderSummary from "../../components/commerce/OrderSummary";
 import EmptyState from "../../components/ui/EmptyState";
 import Skeleton from "../../components/ui/Skeleton";
 import Button from "../../components/ui/Button";
-import { toast } from "../../components/ui/Toast";
+import { toast } from "../../components/ui/toastStore";
 
 export default function Cart() {
   const dispatch = useDispatch();

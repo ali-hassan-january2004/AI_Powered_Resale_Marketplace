@@ -4,8 +4,11 @@ import { useCallback, useEffect, useRef } from "react";
 // ...render items, then <div ref={sentinelRef} /> after the list
 export default function useInfiniteScroll({ onLoadMore, hasMore = true, loading = false, rootMargin = "300px" }) {
   const callbackRef = useRef(onLoadMore);
-  callbackRef.current = onLoadMore;
   const observerRef = useRef(null);
+
+  useEffect(() => {
+    callbackRef.current = onLoadMore;
+  }, [onLoadMore]);
 
   // Callback ref: re-attaches whenever hasMore/loading change, so if the sentinel is still
   // visible after a page loads, the next page is requested automatically.

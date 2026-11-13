@@ -3,7 +3,10 @@ import { Search, X } from "lucide-react";
 
 export default function SearchBar({ defaultValue = "", onSearch, placeholder = "Search by title, brand or description…" }) {
   const [value, setValue] = useState(defaultValue);
-  useEffect(() => setValue(defaultValue), [defaultValue]);
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- The search field is locally editable but follows navigation-provided defaults.
+    setValue(defaultValue);
+  }, [defaultValue]);
 
   const submit = (e) => {
     e.preventDefault();

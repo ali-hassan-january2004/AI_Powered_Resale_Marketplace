@@ -5,7 +5,7 @@ import { getCategories } from "../../api/categories";
 import useFetch from "../../hooks/useFetch";
 import PageContainer from "../../components/layout/PageContainer";
 import ListingForm from "../../components/selling/ListingForm";
-import { toast } from "../../components/ui/Toast";
+import { toast } from "../../components/ui/toastStore";
 
 export default function CreateListing() {
   const navigate = useNavigate();

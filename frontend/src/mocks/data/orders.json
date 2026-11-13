@@ -1,0 +1,53 @@
+[
+  {
+    "_id": "o1", "buyer": "u4", "seller": "u2",
+    "items": [
+      { "listing": "l11", "title": "Camel wool coat", "image": "https://picsum.photos/seed/resale-l11a/600/600", "priceAtPurchase": 70 }
+    ],
+    "shippingAddress": {
+      "label": "Home", "line1": "221 Park Avenue", "city": "Springfield", "region": "IL", "postalCode": "62701", "country": "USA"
+    },
+    "paymentMethod": "cod", "paymentStatus": "paid", "status": "completed",
+    "statusHistory": [
+      { "status": "pending", "at": "2026-10-14T10:00:00.000Z", "note": "Order placed" },
+      { "status": "confirmed", "at": "2026-10-15T09:00:00.000Z" },
+      { "status": "shipped", "at": "2026-10-17T14:00:00.000Z", "note": "Tracking: TRK884213" },
+      { "status": "delivered", "at": "2026-10-21T16:30:00.000Z" },
+      { "status": "completed", "at": "2026-10-24T08:00:00.000Z" }
+    ],
+    "totals": { "subtotal": 70, "shipping": 0, "platformFee": 7, "total": 70 },
+    "createdAt": "2026-10-14T10:00:00.000Z"
+  },
+  {
+    "_id": "o2", "buyer": "u4", "seller": "u3",
+    "items": [
+      { "listing": "l12", "title": "Olive green bomber jacket", "image": "https://picsum.photos/seed/resale-l12a/600/600", "priceAtPurchase": 60 }
+    ],
+    "shippingAddress": {
+      "label": "Home", "line1": "221 Park Avenue", "city": "Springfield", "region": "IL", "postalCode": "62701", "country": "USA"
+    },
+    "paymentMethod": "test_card", "paymentStatus": "paid", "status": "shipped",
+    "statusHistory": [
+      { "status": "pending", "at": "2026-11-06T10:00:00.000Z", "note": "Order placed" },
+      { "status": "confirmed", "at": "2026-11-07T09:00:00.000Z" },
+      { "status": "shipped", "at": "2026-11-09T14:00:00.000Z", "note": "Tracking: TRK120045" }
+    ],
+    "totals": { "subtotal": 60, "shipping": 0, "platformFee": 6, "total": 60 },
+    "createdAt": "2026-11-06T10:00:00.000Z"
+  },
+  {
+    "_id": "o3", "buyer": "u5", "seller": "u2",
+    "items": [
+      { "listing": "l9", "title": "Classic little black dress", "image": "https://picsum.photos/seed/resale-l9a/600/600", "priceAtPurchase": 28 }
+    ],
+    "shippingAddress": {
+      "label": "Home", "line1": "48 Maple Street", "city": "Springfield", "region": "IL", "postalCode": "62704", "country": "USA"
+    },
+    "paymentMethod": "cod", "paymentStatus": "pending", "status": "pending",
+    "statusHistory": [
+      { "status": "pending", "at": "2026-11-11T12:00:00.000Z", "note": "Order placed" }
+    ],
+    "totals": { "subtotal": 28, "shipping": 0, "platformFee": 3, "total": 28 },
+    "createdAt": "2026-11-11T12:00:00.000Z"
+  }
+]
