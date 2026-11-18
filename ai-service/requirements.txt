@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+python-multipart
+httpx
+pillow
+numpy
+torch
+transformers
+scikit-learn
+xgboost
+faiss-cpu
+imagehash
+python-dotenv
