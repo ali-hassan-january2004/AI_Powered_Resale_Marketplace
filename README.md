@@ -146,6 +146,17 @@ uvicorn app.main:app --reload --port 8000
 
 The service runs at **http://localhost:8000** (health check: `GET /health`). Interactive docs are at `/docs`.
 
+### Run all three services together (Windows)
+
+After installing each service's dependencies using the steps above, stop any individually running dev servers. From the repository root, install the process runner once and start all services:
+
+```powershell
+npm.cmd install
+npm.cmd run dev
+```
+
+This starts the backend, frontend, and AI service together. Press `Ctrl+C` to stop them. The AI service currently provides a health endpoint only; its AI features are not implemented yet.
+
 ## Project Structure
 
 ```

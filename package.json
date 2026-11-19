@@ -1,0 +1,13 @@
+{
+  "name": "ai-powered-resale-marketplace",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --kill-others --names backend,frontend,ai-service \"npm:dev:backend\" \"npm:dev:frontend\" \"npm:dev:ai\"",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:ai": "ai-service\\.venv\\Scripts\\python.exe -m uvicorn app.main:app --app-dir ai-service --reload --host 127.0.0.1 --port 8000"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
